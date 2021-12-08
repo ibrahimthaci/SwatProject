@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
@@ -11,9 +12,9 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexStudent()
     {
-        //
+        return('its working student');
     }
 
     /**
@@ -21,9 +22,15 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createStudent()
     {
-        //
+        Student::create([
+            'name'=>'enis',
+            'lastname'=>'skoro',
+            'address'=>'sefidin laqi',
+            'email'=>'enis@gmail.com',
+            'phone'=>'044112113',
+        ]);
     }
 
     /**
@@ -32,7 +39,7 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeStudent(Request $request)
     {
         //
     }
@@ -43,7 +50,7 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showStudent($id)
     {
         //
     }
@@ -54,7 +61,7 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editStudent($id)
     {
         //
     }
@@ -66,7 +73,7 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateStudent(Request $request, $id)
     {
         //
     }
@@ -77,7 +84,7 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroyStudent($id)
     {
         //
     }

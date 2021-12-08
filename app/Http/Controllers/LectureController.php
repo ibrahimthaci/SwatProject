@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Lecture;
 
 class LectureController extends Controller
 {
@@ -11,9 +12,9 @@ class LectureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexLecture()
     {
-        //
+        return('its working lectures');
     }
 
     /**
@@ -21,9 +22,9 @@ class LectureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createLecture()
     {
-        //
+        Lecture::create(['name'=>'Database','semester'=>'1','proffessor'=>'Zirije Hasani']);
     }
 
     /**
@@ -32,7 +33,7 @@ class LectureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeLecture(Request $request)
     {
         //
     }
@@ -43,7 +44,7 @@ class LectureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showLecture($id)
     {
         //
     }
@@ -54,7 +55,7 @@ class LectureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editLecture($id)
     {
         //
     }
@@ -66,7 +67,7 @@ class LectureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateLecture(Request $request, $id)
     {
         //
     }
@@ -77,7 +78,7 @@ class LectureController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroyLecture($id)
     {
         //
     }
